@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.herprogramacion.iwish">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- Actividad Principal -->
+        <activity
+            android:name=".ui.actividades.LoginActivity"
+            android:theme="@style/prueba"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Actividad Actualizar -->
+        <activity
+            android:name=".ui.actividades.UpdateActivity"
+            android:label="@string/title_activity_update"
+            android:parentActivityName=".ui.actividades.DetailActivity"
+            android:theme="@style/AppTheme.Detail">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.actividades.DetailActivity" />
+        </activity>
+
+        <!-- Actividad Actualizar -->
+        <activity
+            android:name=".ui.actividades.UpdateActivity2"
+            android:label="@string/title_activity_update"
+            android:parentActivityName=".ui.actividades.DetailActivity"
+            android:theme="@style/AppTheme.Detail">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.actividades.DetailActivity" />
+        </activity>
+
+        <!-- Actividad Actualizar -->
+        <activity
+            android:name=".ui.actividades.UpdateActivity3"
+            android:label="@string/title_activity_update"
+            android:parentActivityName=".ui.actividades.DetailActivity"
+            android:theme="@style/AppTheme.Detail">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.actividades.DetailActivity" />
+        </activity>
+
+        <!-- Actividad Detalle -->
+        <activity
+            android:name=".ui.actividades.DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName=".ui.actividades.MainActivity"
+            android:theme="@style/AppTheme.Detail">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.actividades.MainActivity" />
+        </activity>
+
+        <!-- Actividad Detalle Grupo -->
+        <activity
+            android:name=".ui.actividades.DetailGroupActivity"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName=".ui.actividades.GroupActivity"
+            android:theme="@style/AppTheme.Detail">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.actividades.GroupActivity" />
+        </activity>
+
+        <!-- Actividad Votar -->
+        <activity
+            android:name=".ui.actividades.VoteActivity"
+            android:label="@string/title_activity_update"
+            android:parentActivityName=".ui.actividades.DetailGroupActivity"
+            android:theme="@style/AppTheme.Detail">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.actividades.DetailGroupActivity" />
+        </activity>
+
+        <!--Actividad Insertar -->
+        <activity
+            android:name=".ui.actividades.InsertActivity"
+            android:label="@string/title_activity_insert"
+            android:parentActivityName=".ui.actividades.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.actividades.MainActivity" />
+        </activity>
+
+        <activity android:name=".ui.actividades.MainActivity" android:theme="@style/prueba" />
+        <activity android:name=".ui.actividades.SignupActivity" android:theme="@style/prueba" />
+        <activity android:name=".ui.actividades.GroupActivity" android:theme="@style/prueba" />
+    </application>
+
+</manifest>
